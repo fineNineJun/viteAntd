@@ -25,7 +25,7 @@
         "src/apis/*"
       ],
       "views/*": [
-        "src/utils/*"
+        "src/views/*"
       ],
       "routes/*": [
         "src/routes/*"

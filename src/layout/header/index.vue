@@ -1,23 +1,28 @@
 <template>
   <a-layout-header style="background: #fff; padding: 0;">
-    <menu-unfold-outlined v-if="collapsed" class="trigger" @click="() => (collapsed = !collapsed)"/>
-    <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)"/>
+    <!--<menu-unfold-outlined v-if="collapsed" class="trigger" @click="() => (collapsed = !collapsed)"/>-->
+    <!--<menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)"/>-->
+    <Icon icon="MenuUnfoldOutlined" v-if="isCollapse" class="trigger" @click="toggleCollapse" />
+    <Icon icon="MenuFoldOutlined" v-else class="trigger" @click="toggleCollapse" />
   </a-layout-header>
 </template>
 
 <script lang="ts">
-import {defineComponent, ref} from "vue";
-import {MenuUnfoldOutlined, MenuFoldOutlined} from "@ant-design/icons-vue";
+import {computed, defineComponent, ref} from "vue";
+import {useStore} from "store/index";
 
 export default defineComponent({
   name: "layoutHeader",
-  components: {
-    MenuUnfoldOutlined,
-    MenuFoldOutlined
-  },
-  data() {
+  setup() {
+    const store = useStore()
+    const isCollapse = computed(() => store.state.settings.isCollapse);
+    const toggleCollapse = () => {
+      store.commit("TOGGLE_COLLAPSE")
+    }
+
     return {
-      collapsed: ref<boolean>(false)
+      isCollapse,
+      toggleCollapse
     }
   }
 })

@@ -9,12 +9,14 @@
   },
   "dependencies": {
     "ant-design-vue": "^2.2.8",
+    "ramda": "^0.28.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.18",
+    "@types/ramda": "^0.27.64",
     "@vitejs/plugin-vue": "^2.2.0",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
