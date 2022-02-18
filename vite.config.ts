@@ -11,6 +11,7 @@ export default defineConfig({
       "@/":resolve("src/*"),
       comps: resolve("src/components"),
       store: resolve("src/store"),
+      vue: "vue/dist/vue.esm-bundler.js"
     }
   }
 })
