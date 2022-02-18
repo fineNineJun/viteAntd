@@ -1,6 +1,8 @@
 <template>
   <h1>{{ msg }}</h1>
-  <a-button type="danger" @click="increment">count is: {{ count }}</a-button>
+  <a-button type="primary" @click="increment">count is: {{ count }}</a-button>
+  <a-radio checked>Radio</a-radio>
+  <a-checkbox checked>Checkbox</a-checkbox>
 </template>
 
 <script lang="ts">
