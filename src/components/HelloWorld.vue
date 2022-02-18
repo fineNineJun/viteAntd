@@ -1,6 +1,6 @@
 <template>
   <h1>{{ msg }}</h1>
-  <button type="button" @click="increment">count is: {{ count }}</button>
+  <a-button type="danger" @click="increment">count is: {{ count }}</a-button>
 </template>
 
 <script lang="ts">
